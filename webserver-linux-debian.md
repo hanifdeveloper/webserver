@@ -7,16 +7,19 @@ dan juga database server (MySQL). Untuk mempermudah pengaturan host, akan dijela
 sudo apt update
 sudo apt-get install apache2 -y
 ```
-> Sebagai aplikasi tambahan, jika dibutuhkan kita perlu juga menginstall aplikasi curl
--- Optional Install Curl
+>Sebagai aplikasi tambahan, jika dibutuhkan kita perlu juga menginstall aplikasi curl
+```
 sudo apt-get install curl
 ```
--- Common Function
+>Berikut daftar command yang sering digunakan dalam aplikasi apache
+```
 sudo systemctl status apache2
 sudo systemctl start apache2
 sudo systemctl restart apache2
 sudo systemctl stop apache2
-
--- Jika ada perubahan konfigurasi, cukup reload service
+```
+>Jika ada perubahan konfigurasi seperti mengedit file apache.conf, php.ini dll yang membutuhkan restart apache
+maka cukup ketik perintah dibawah ini
+```
 sudo systemctl reload apache2
 ```
