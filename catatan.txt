@@ -1,0 +1,884 @@
+cd /path/to/your/repo
+
+first git
+git init
+git remote rm origin
+git remote add origin https://hanifdeveloper@bitbucket.org/hanifdeveloper/simpeg-pekalongan-kota.git
+git add .
+git commit -m "upload first"
+git push -u origin master
+
+second git
+git add .
+git status
+git commit -m ""
+git push origin master
+git fetch && git checkout master
+
+## Reset Git
+git fetch origin
+git reset --hard origin/master
+
+
+**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+
+When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+
+*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+
+---
+
+## Edit a file
+
+You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+
+1. Click **Source** on the left side.
+2. Click the README.md link from the list of files.
+3. Click the **Edit** button.
+4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
+5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
+6. Go back to the **Source** page.
+
+---
+
+## Create a file
+
+Next, you’ll add a new file to this repository.
+
+1. Click the **New file** button at the top of the **Source** page.
+2. Give the file a filename of **contributors.txt**.
+3. Enter your name in the empty file space.
+4. Click **Commit** and then **Commit** again in the dialog.
+5. Go back to the **Source** page.
+
+Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+
+---
+
+## Clone a repository
+
+Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+
+1. You’ll see the clone button under the **Source** heading. Click that button.
+2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
+3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
+4. Open the directory you just created to see your repository’s files.
+
+Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+
+## Konfigurasi Server Simpeg
+SERVER DEV SIMPEG 192.168.254.65
+PHP 7.0.27 , MySql , Apache2 
+
+user OS : admin / _4dm1n@Dev
+user DB : admin / _4dm1n-DB@Dev
+alias phpadmin : /adminSIMPEG
+user portal : admin / admin
+
+ssh admin@192.168.254.65
+_4dm1n@Dev
+
+ssh -L 9000:localhost:80 mabespolri@36.67.61.123
+ssh admin@192.168.254.65 -L 3307:127.0.0.1:3306 -N
+
+Server simpeg  226
+ssh root@192.168.254.226
+_new-simpeg@SIMAPP
+_new-simpeg-db@SIMAPP
+
+OS
+Username: admin
+Pasword: _4dm1n@App
+
+DB
+Username: admin
+Password: $absensi-db@simapp
+
+## Instalasi Apache2
+sudo service apache2 stop
+sudo apt-get purge apache2*
+sudo apt-get autoremove
+whereis apache2
+sudo rm -rf /etc/apache2
+
+sudo apt update
+sudo systemctl status apache2
+sudo systemctl start apache2
+sudo systemctl restart apache2
+sudo systemctl stop apache2
+sudo systemctl reload apache2
+sudo systemctl stop apache2
+sudo systemctl stop apache2
+
+## Instalasi PHP 7
+list php
+// Check Modul PHP yang terinstall
+dpkg --list | grep php | awk '/^ii/{ print $2}'
+x="$(dpkg --list | grep php | awk '/^ii/{ print $2}')"
+sudo apt-get --purge remove $x
+sudo apt-get autoremove phpmyadmin
+sudo apt-get purge php7.*
+sudo apt-get autoremove
+
+sudo apt-get install php7.2
+sudo apt-get install php7.0-mysql
+php -i
+
+
+## Konfigurasi PHP & MySQL
+php.ini
+upload_max_filesize = 10M
+post_max_size = 10M
+
+my.cnf
+innodb_buffer_pool_size = 384M
+innodb_additional_mem_pool_size = 20M
+innodb_log_file_size = 10M
+innodb_log_buffer_size = 64M
+innodb_flush_log_at_trx_commit = 1
+innodb_lock_wait_timeout = 180
+
+## Instalasi Curl
+sudo apt-get install curl
+sudo apt-get install php7.0-curl
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+node -v
+npm -v
+sudo apt-get install -y nodejs
+sudo apt-get install gcc g++ make
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+node -v
+
+## Konfigurasi .httaccess
+php -version
+sudo chmod -R 777 upload/
+sudo apt-get install php7.0-gd
+sudo pico /etc/apache2/apache2.conf 
+sudo pico /etc/apache2/sites-available/000-default.conf 
+sudo a2enmod rewrite 
+sudo service apache2 restart
+sudo chmod -R 777 upload/
+
+## Konfigurasi Node JS
+npm install nohup
+start aplikasi : npm start / Nohup npm start &
+ps aux | grep node
+kill proses node js
+ps aux | grep node
+killall node
+
+## Konfigurasi Virtual Host
+sudo nano /etc/apache2/ports.conf 
+Listen 999
+sudo nano /etc/apache2/sites-available/default
+<VirtualHost *:999>
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/htdocs/piisd
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+<VirtualHost *:9999>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/testing
+    <Directory "/var/www/testing">
+    		Options Indexes FollowSymLinks
+            AllowOverride All
+            Order allow,deny
+            Allow from all
+            Require all granted
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+## Create Domain with VirtualHost
+add file /private/etc/apache2/extra/httpd-vhosts.conf
+<VirtualHost *:80>
+    ServerAdmin hanif.softdev@site.dev
+    ServerName simpeg.haniv.com
+    ServerAlias www.simpeg.haniv.com
+    DocumentRoot "/Users/hanifmuhammad/Sites/simpeg"
+    <Directory "/Users/hanifmuhammad/Sites/simpeg">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+        Require all granted
+    </Directory>
+    ErrorLog "/private/var/log/apache2/simpeg.haniv.com-error_log"
+    CustomLog "/private/var/log/apache2/simpeg.haniv.com-access_log" common
+</VirtualHost>
+
+add /private/etc/hosts
+127.0.0.1	simpeg.haniv.com
+restart dns
+sudo killall -HUP mDNSResponder
+
+
+git remote add origin https://hanifdeveloper@bitbucket.org/kominfopklcity/web-application-simpeg.git
+git push -u origin master
+
+git config color.ui true
+git config format.pretty oneline
+git add -i
+
+## Informasi spesifikasi prosessor (CPU)
+#Linux
+cat /proc/cpuinfo | grep "model name"
+#Mac
+sysctl -n machdep.cpu.brand_string
+
+Untuk mengetahui salah satu item data yang Anda perlukan adalah menambahkan perintah | grep 'item data'. Contohnya jika Anda hanya ingin mengetahui model prosessornya saja, maka gunakan perintah berikut: 
+cat /proc/cpuinfo | grep 'model name'
+
+## Informasi spesifikasi memory (RAM)
+cat /proc/meminfo
+
+## Untuk mengetahui kapasitas total memori terpasang, maka gunakan perintah berikut:
+cat /proc/meminfo | grep MemTotal
+
+## Informasi spesifikasi chipset grafis (VGA)
+lspci -nnk | grep VGA -A1
+
+## Informasi kapasitas hardisk(HD)
+sudo fdisk -l | grep Disk
+
+## Informasi Versi Ubuntu
+lsb_release -a
+cat /etc/issue
+cat /etc/*release
+uname -r
+uname -a
+
+## Instal semua paket multimedia
+sudo apt-get install ubuntu-restricted-extras
+
+Command Linux
+## Liat ukuran file sebuah folder 
+du -h upload
+
+## Liat jumlah file sebuah folder
+ls upload | wc -l
+
+use MatthiasMullie\Minify;
+protected function sendFCM($data){
+    $url = 'https://fcm.googleapis.com/fcm/send';
+    $fields = array(
+        'to' => '/topics/dinkominfo.pekalongankota.simpeg',
+        // 'condition' => "'petugas' in topics || 'testing' in topics",
+        'data' => $data, //Untuk notifikasi jika app runing in foreground,
+    );
+    $headers = array(
+        // api_key in Firebase Console -> Project Settings -> CLOUD MESSAGING -> Server key
+        'Authorization: key=AAAAyBmBAWc:APA91bE8JrjH-Yy95KUhI0UfqRsEdd86_hCEg7V1d1eTIu4vIjfxfj4-tBB9VeeS1IXewuzWfQIG44S8-h5QsvpdqUI6N_0v6cVn1mWhsLGQ4MvPH09updIZhkSCgW_lZ0Nxg790O-TnrwLtIW1txgo2mSh6vU6yxA',
+        'Content-Type: application/json'
+    );
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);  
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+    $result = curl_exec($ch);           
+    if($result === FALSE){
+        die('Curl failed: ' . curl_error($ch));
+    }
+    curl_close($ch);
+    return $result;
+}  
+
+protected function getStyleCSS($template){
+    $template = $this->getUrl->mainConfig['template'][$template];
+    $basePath = $template['basePath'];
+    $css = $template['css'];
+    $css_content = '';
+    foreach ($css as $key => $value) {
+        echo '<link rel="stylesheet" type="text/css" href="'.$value.'">'."\n";
+    }
+}
+
+protected function getStyleCSS(){
+    $template = $this->getUrl->mainConfig['template']['simpeg'];
+    $basePath = $template['basePath'];
+    $css = $template['css'];
+    $css_content = '';
+    foreach ($css as $key => $value) {
+        $file_css = file_get_contents('http://site.com/simpeg/template/PaperPanel/'.$value);
+        $css_content .= $file_css;
+        // echo '<link rel="stylesheet" href="'.$value.'">'."\n";
+    }
+
+
+    $minifier = new Minify\CSS($css_content);
+    $extensions = array(
+        'gif' => 'data:image/gif',
+        'png' => 'data:image/png',
+    );
+    $minifier->setImportExtensions($extensions);
+    echo $minifier->minify();
+        // $minifier->minify('style.min.css');
+}
+
+Reset Password Root
+sudo systemctl restart mysql
+systemctl status mysql.service
+sudo systemctl stop mysql.service
+mysqld_safe --skip-grant-tables &
+
+sudo apt install mysql-server
+mysql_secure_installation
+
+sudo apt-get remove --purge mysql-server mysql-client mysql-common -y
+sudo apt-get autoremove -y
+sudo apt-get autoclean
+
+sudo apt-get install mysql-server mysql-client
+sudo apt-get install phpmyadmin
+
+sudo service mysql start
+cd /var/run
+sudo cp -rp ./mysqld ./mysqld.bak
+
+sudo killall -9 mysqld mysqld_safe
+sudo service mysql stop
+sudo mv ./mysqld.bak ./mysqld
+sudo mysqld_safe --skip-grant-tables --skip-networking &
+mysql -u root
+
+USE mysql;
+SELECT user, host, password, plugin, authentication_string FROM mysql.user;
+UPDATE user SET authentication_string=PASSWORD('root') WHERE User='root';
+UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User='root';
+FLUSH PRIVILEGES;
+sudo service mysql restart
+if error sudo killall -9 mysqld mysqld_safe
+
+Change password
+FLUSH PRIVILEGES;
+SET PASSWORD FOR root@'localhost' = PASSWORD('root');
+select user, host, password, plugin, authentication_string from mysql.user where user='root';
+update mysql.user set password=password('_4dm1n-DB@Dev') where user='root';
+update mysql.user set authentication_string=password('_4dm1n-DB@Dev') where user='root';
+FLUSH PRIVILEGES;
+quit
+mysql -u root -proot
+USE mysql;
+CREATE USER 'admin'@'localhost' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
+UPDATE user SET plugin='auth_socket' WHERE User='admin';
+ALTER USER 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY '_4dm1n-DB@Dev';
+FLUSH PRIVILEGES;
+exit;
+
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' IDENTIFIED BY '_4dm1n-DB@Dev';
+SELECT user FROM mysql.user GROUP BY user;
+select user, host, password, plugin, authentication_string from mysql.user;
+DELETE FROM mysql.user WHERE user = 'username';
+UPDATE user SET plugin='auth_socket' WHERE User='root';
+
+
+### PHP Command Line'
+Menampilkan bantuan:
+php -h
+
+Mengeksekusi sebuah skrip:
+php -f nama-skrip.php
+atau
+php nama-skrip.php
+
+Membuat Server:
+php -S localhost:8000
+
+Menampilkan informasi PHP:
+php -i
+
+Menampilkan versi PHP:
+php -v
+
+Eksekusi fungsi bawaan PHP:
+php -r 'echo "Sekarang tanggal " . Date("d/m/Y") ."\n";'
+
+PHP Interaktif
+Cara masuk ke mode PHP interaktif adalah dengan mengetik perintah php -a pada terminal.
+
+CRONTAB
+=======
+Apa Itu Crontab?
+Cron daemon merupakan sebuah service yang berjalan di semua distribusi Unix dan Linux. 
+Service ini didesain khususnya untuk mengeksekusi suatu perintah diwaktu-waktu tertentu yang telah ditentukan. 
+Tugas yang dikenal dengan istilah cronjobs ini merupakan hal mendasar yang harus dipahami setiap System 
+Administrator. Cronjobs sangat berguna untuk mengotomatiskan suatu script sehingga mereka dapat dijalankan 
+diwaktu-waktu tertentu.
+
+Membuat Crontab Baru
+Crontab dapat dibuat dengan mudah menggunakan perintah crontab.
+
+Untuk membuat atau mengubah isi crontab
+user@machine:~$ crontab -e
+
+Perintah Dasar Crontab
+    crontab -e Mengubah atau membuat file crontab jika belum ada.
+    crontab -l Menampilkan isi file crontab.
+    crontab -r Menghapus file crontab.
+    crontab -v Menampilkan waktu terakhir mengubah isi file crontab. (Hanya tersedia dibeberapa sistem).
+
+Crontab Parameters
+# m h dom mon dow command
+
+Baris yang dikomentari di atas menampilkan parameter tentang bagaimana crontab mendefinisikan setiap cronjob.
+Daftar Parameter Crontab
+    m - Minute (menit) - 0 to 59
+    h - Hour (jam) - 0 to 23
+    dom - Day of Month (tanggal) - 0 to 31
+    mon - Month (bulan) - 0 to 12
+    dow - Day of Week (nomor hari) - 0 to 7 (0 dan 7 adalah hari minggu)
+
+* * * * * perintah yang akan dieksekusi
+– – – – –
+| | | | |
+| | | | +—– day of week (0 – 7) (Sunday=0)
+| | | +——- month (1 – 12)
+| | +——— day of month (1 – 31)
+| +———– hour (0 – 23)
++————- min (0 – 59)
+
+Parameter-parameter di atas memungkinkan kita untuk membuat suatu jobs yang berjalan pada waktu-waktu tertentu. 
+Setiap parameter yang dipilih dapat mengatur details waktu eksekusi sampai ke menit. Ada karakter khusus yang 
+dapat membuat crontab lebih fleksibel.
+
+Karakter Khusus
+Kita dapat menggunakan karakter khusus disebuah cron untuk memperbolehkan pengguna menentukan interval waktu bagi sebuah job untuk dieksekusi. Karakter khusus ini dipakai di crontab untuk mendeklarasi cronjob.
+
+Karakter khusus: Asterisk (bintang)
+Karakter Asterisk (bintang) merupakan karakter wild card yang dipakai untuk membuat sebuah job dijalankan setiap menit, setiap jam, setiap, hari, setiap bulan (tergantung posisi dimana ia ditulis, lihat grafik di atas).
+
+Contoh:
+* * * * * /home/user/script.sh
+
+Karakter khusus: Koma
+Karakter koma saat kita ingin mengeksekusi sebuah job di dua waktu atau lebih. Contoh di bawah ini misalnya, 
+kita ingin mengeksekusi /home/user/script.sh setiap menit ke 0, 15, dan 25.
+0,15,25 * * * * /home/user/script.sh
+
+Karakter khusus: Hyphen (-)
+Karakter - dipakai untuk memberikan jarak waktu antar eksekusi job.
+0-59 0-23 * * * /home/user/script.sh
+
+Karakter khusus: Forward Slash (/)
+Karakter / dipakai jika kita ingin memberikan interval antar eksekusi job. Pada contoh di bawah ini kita 
+ingin agar script.sh dieksekusi pada menit ke 0 lalu 20 kemudian 40 dan 60.
+*/20 * * * * /home/user/script.sh
+
+Contoh Crontab
+Sebagian besar crontab dapat memiliki metode sendiri dalam pembuatannya dengan menggunakan wild card atau 
+mendefinisikan sebuah jarak.
+
+Setiap menit setiap hari
+# m h dom mon dow command
+  * * * * * /home/user/script.sh
+
+Atau
+# m h dom mon dow command
+ 0-59 0-23 0-31 0-12 0-7 /home/user/script.sh
+
+Setiap 10 menit setiap hari
+# m h dom mon dow command
+  */10 * * * * /home/user/script.sh
+
+Atau
+# m h dom mon dow command
+  0-59/10 * * * * /home/user/script.sh
+
+Atau
+# m h dom mon dow command
+  0,10,20,30,40,50 * * * * /home/user/script.sh
+
+Setiap 5 menit pada pukul 6 pagi dimulai pada 6:07
+# m h dom mon dow command
+ 07-59/5 06 * * * /home/user/script.sh
+ # Perintah ini  akan berjalan pada 6:07, 6:012, 6:17, 6:22, 6:27, seterusnya sampai 6:57
+
+Setiap hari tengah malam
+# m h dom mon dow command
+ 0 0 * * * /home/user/script.sh
+
+Atau
+# m h dom mon dow command
+ 0 0 * * 0-7 /home/user/script.sh
+
+Tiga kali sehari
+# m h dom mon dow command
+  0 */8 * * * /home/user/script.sh
+
+Atau
+# m h dom mon dow command
+  0 0-23/8 * * * /home/user/script.sh
+
+Atau
+# m h dom mon dow command
+  0 0,8,16 * * * /home/user/script.sh
+
+Setiap weekday (Senin - Jumat) jam 6 pagi
+# m h dom mon dow command
+  0 06 * * 1-5 /home/user/script.sh
+
+Setiap weekend (Sabtu - Minggu) jam 6 pagi
+# m h dom mon dow command
+  0 06 * * 6,7 /home/user/script.sh
+
+Atau
+# m h dom mon dow command
+  0 06 * * 6-7 /home/user/script.sh
+
+Sebulan sekali setiap tanggal 20 jam 6 pagi
+# m h dom mon dow command
+  0 06 20 * * /home/user/script.sh
+
+Setiap 4 hari sekali jam 6 pagi
+# m h dom mon dow command
+  0 06 */4 * * /home/user/script.sh
+
+Setiap 4 bulan sekali tanggal 10 jam 6 pagi
+# m h dom mon dow command
+  0 06 10 */4 * /home/user/script.sh
+
+Penggunaan String Khusus
+Kita juga dapat menggunakan string khusus sebagai pengganti kelima parameter di atas untuk memudahkan pembacaan.
+    @reboot - Dijalankan sekali setiap kali sistem dihidupkan
+    @yearly - Dijalankan sekali setahun 0 0 1 1 *
+    @annually - Sama seperti @yearly
+    @monthly - Dijalankan sekali sebulan 0 0 1 * *
+    @weekly - Dijalankan sekali seminggu 0 0 * * 0
+    @daily - Dijalankan setiap hari 0 0 * * *
+    @midnight - Sama seperti @daily
+    @hourly - Dijalankan setiap jam 0 * * * *
+
+Contoh Penggunaan String
+
+Setiap jam
+@hourly /home/user/script.sh
+
+Setiap bulan
+@monthly /home/user/script.sh
+
+Membuat Log File
+Untuk menyimpan output cron di sebuah file, gunakan tanda >:
+10 * * * * /usr/bin/php /www/virtual/username/script.py > /var/log/cron.log
+Perintah di atas akan menimpa output sebelumnya. Jika ingin menambahkan output dibaris terakhir tanpa 
+menimpa output sebelumnya gunakan tanda >>:
+10 * * * * /usr/bin/php /www/virtual/username/script.py >> /var/log/cron.log
+
+Blok Output yang Terlalu Ramai
+Terkadang kita memiliki script yang memiliki output sangat panjang setiap dieksekusi dan dapat memenuhi log. Kita dapat menyembunyikan pesan-pesan tersebut dengan mengirimkan output-nya ke "/dev/null".
+
+# MAILTO=""
+MAILTO=email@example.com
+30 11 * * * /your/directory/whatever.py >/dev/null 2>&1
+
+Apa maksud 2>&1 ?
+Disini,
+Descriptor 1 artinya standard output (stdout) dan descriptor 2 artinya standard error (stderr).
+echo test > afile.txt
+
+... akan me-redirect stdout ke sebuah file bernama afile.txt. Sama dengan:
+echo test 1> afile.txt
+
+Untuk me-redirect stderr kita akan menulis:
+echo test 2> afile.txt
+
+& adalah sintaks yang dipakai untuk me-redirect suatu aliran data ke descriptor lain - 0 untuk stdin. 1 untuk stdout. 2 untuk stderr.
+
+Kita dapat me-redirect stdout ke stderr dengan melakukan:
+echo test 1>&2 # or echo test >&2
+
+Atau sebaliknya:
+echo test 2>&1
+
+Jadi singkatnya, 2> artinya kita ingin mengalirkan suatu stream stderr ke stdout (&1).
+Executable Script
+10 * * * * /usr/bin/php /www/virtual/username/hello.php
+
+Saat sebuah script perlu dijalankan menggunakan aplikasi khusus, kita dapat menentukan perintah yang 
+mengeksekusinya di depan script. Cara lainnya ialah menggunakan shebang yaitu dengan 
+menambah #!/usr/local/bin/php di bagian paling atas suatu file:
+#!/usr/local/bin/php
+<?php
+echo "hello world\n";
+// ...
+?>
+
+Lalu pastikan script di atas memiliki ijin untuk dieksekusi (chmodnya 755).
+
+chmod 755 hello.php
+./hello.php
+
+Crontab sebelumnya dapat lebih singkat:
+10 * * * * /www/virtual/username/hello.php
+
+Apa maksud tanda #!?
+Setiap tanda shebang (#!) di script manampun memberikan kemampuaan script tersebut untuk 
+dieksekusi layaknya aplikasi standalone tanpa perlu menuliskan python atau php di depannya 
+seperti saat kita menuliskan di terminal. Contohnya adalah:
+
+#!/usr/bin/env python
+#!/usr/bin/env python biasanya mengarah ke Python 2.7.x, jika ingin menggunakan Python 3.x, atau yang terbaru, gunakan:
+#!/usr/bin/env python3
+
+Menjalankan beberapa script bersamaan
+Kita dapat menggunakan tanda "&" untuk menjalankannya secara pararel (sekaligus) atau 
+tanda "&&" untuk menjalankannya satu persatu.
+# script.sh & script2.sh & script.sh
+
+Sampel Aplikasi PSII
+0 8,12,16 * * * php /var/htdocs/psii/autoping.php 2>&1 >> /var/htdocs/psii/autoping.log
+
+
+Step 1 — Installing Apache
+
+Apache is available within Debian's default software repositories, making it possible to install it using conventional package management tools.
+
+Let's begin by updating the local package index to reflect the latest upstream changes:
+
+    sudo apt update
+
+Then, install the apache2 package:
+
+    sudo apt-get install apache2
+
+After confirming the installation, apt will install Apache and all required dependencies.
+Step 2 — Adjusting the Firewall
+
+Before testing Apache, it's necessary to modify the firewall settings to allow outside access to the default web ports. Assuming that you followed the instructions in the prerequisites, you should have a UFW firewall configured to restrict access to your server.
+
+During installation, Apache registers itself with UFW to provide a few application profiles that can be used to enable or disable access to Apache through the firewall.
+
+List the ufw application profiles by typing:
+
+    sudo ufw app list
+
+You will see a list of the application profiles:
+
+Output
+Available applications:
+  AIM
+  Bonjour
+  CIFS
+. . . 
+ WWW
+ WWW Cache
+ WWW Full
+ WWW Secure
+. . . 
+
+The Apache profiles begin with WWW:
+
+    WWW: This profile opens only port 80 (normal, unencrypted web traffic)
+    WWW Cache: This profile opens only port 8080 (sometimes used for caching and web proxies)
+    WWW Full: This profile opens both port 80 (normal, unencrypted web traffic) and port 443 (TLS/SSL encrypted traffic)
+    WWW Secure: This profile opens only port 443 (TLS/SSL encrypted traffic)
+
+It is recommended that you enable the most restrictive profile that will still allow the traffic you've configured. Since we haven't configured SSL for our server yet in this guide, we will only need to allow traffic on port 80:
+
+    sudo ufw allow 'WWW'
+
+You can verify the change by typing:
+
+    sudo ufw status
+
+You should see HTTP traffic allowed in the displayed output:
+
+Output
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+WWW                        ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
+WWW (v6)                   ALLOW       Anywhere (v6)
+
+As you can see, the profile has been activated to allow access to the web server.
+Step 3 — Checking your Web Server
+
+At the end of the installation process, Debian 9 starts Apache. The web server should already be up and running.
+
+Check with the systemd init system to make sure the service is running by typing:
+
+    sudo systemctl status apache2
+
+Output
+● apache2.service - The Apache HTTP Server
+   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2018-09-05 19:21:48 UTC; 13min ago
+ Main PID: 12849 (apache2)
+   CGroup: /system.slice/apache2.service
+           ├─12849 /usr/sbin/apache2 -k start
+           ├─12850 /usr/sbin/apache2 -k start
+           └─12852 /usr/sbin/apache2 -k start
+
+Sep 05 19:21:48 apache systemd[1]: Starting The Apache HTTP Server...
+Sep 05 19:21:48 apache systemd[1]: Started The Apache HTTP Server.
+
+As you can see from this output, the service appears to have started successfully. However, the best way to test this is to request a page from Apache.
+
+You can access the default Apache landing page to confirm that the software is running properly through your IP address. If you do not know your server's IP address, you can get it a few different ways from the command line.
+
+Try typing this at your server's command prompt:
+
+    hostname -I
+
+You will get back a few addresses separated by spaces. You can try each in your web browser to see if they work.
+
+An alternative is using the curl tool, which should give you your public IP address as seen from another location on the internet.
+
+First, install curl using apt:
+
+    sudo apt install curl
+
+Then, use curl to retrieve icanhazip.com using IPv4:
+
+    curl -4 icanhazip.com
+
+When you have your server's IP address, enter it into your browser's address bar:
+
+http://your_server_ip
+
+You should see the default Debian 9 Apache web page:
+
+Apache default page
+
+This page indicates that Apache is working correctly. It also includes some basic information about important Apache files and directory locations.
+Step 4 — Managing the Apache Process
+
+Now that you have your web server up and running, let's go over some basic management commands.
+
+To stop your web server, type:
+
+    sudo systemctl stop apache2
+
+To start the web server when it is stopped, type:
+
+    sudo systemctl start apache2
+
+To stop and then start the service again, type:
+
+    sudo systemctl restart apache2
+
+If you are simply making configuration changes, Apache can often reload without dropping connections. To do this, use this command:
+
+    sudo systemctl reload apache2
+
+By default, Apache is configured to start automatically when the server boots. If this is not what you want, disable this behavior by typing:
+
+    sudo systemctl disable apache2
+
+To re-enable the service to start up at boot, type:
+
+    sudo systemctl enable apache2
+
+Apache should now start automatically when the server boots again.
+Step 5 — Setting Up Virtual Hosts (Recommended)
+
+When using the Apache web server, you can use virtual hosts (similar to server blocks in Nginx) to encapsulate configuration details and host more than one domain from a single server. We will set up a domain called example.com, but you should replace this with your own domain name. To learn more about setting up a domain name with DigitalOcean, see our Introduction to DigitalOcean DNS.
+
+Apache on Debian 9 has one server block enabled by default that is configured to serve documents from the /var/www/html directory. While this works well for a single site, it can become unwieldy if you are hosting multiple sites. Instead of modifying /var/www/html, let's create a directory structure within /var/www for our example.com site, leaving /var/www/html in place as the default directory to be served if a client request doesn't match any other sites.
+
+Create the directory for example.com as follows, using the -p flag to create any necessary parent directories:
+
+sudo mkdir -p /var/www/example.com/html
+
+Next, assign ownership of the directory with the $USER environmental variable:
+
+    sudo chown -R $USER:$USER /var/www/example.com/html
+
+The permissions of your web roots should be correct if you haven't modified your unmask value, but you can make sure by typing:
+
+    sudo chmod -R 755 /var/www/example.com
+
+Next, create a sample index.html page using nano or your favorite editor:
+
+    nano /var/www/example.com/html/index.html
+
+Inside, add the following sample HTML:
+/var/www/example.com/html/index.html
+
+<html>
+    <head>
+        <title>Welcome to Example.com!</title>
+    </head>
+    <body>
+        <h1>Success!  The example.com server block is working!</h1>
+    </body>
+</html>
+
+Save and close the file when you are finished.
+
+In order for Apache to serve this content, it's necessary to create a virtual host file with the correct directives. Instead of modifying the default configuration file located at /etc/apache2/sites-available/000-default.conf directly, let's make a new one at /etc/apache2/sites-available/example.com.conf:
+
+    sudo nano /etc/apache2/sites-available/example.com.conf
+
+Paste in the following configuration block, which is similar to the default, but updated for our new directory and domain name:
+/etc/apache2/sites-available/example.com.conf
+
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    ServerName example.com
+    ServerAlias www.example.com
+    DocumentRoot /var/www/example.com/html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+Notice that we've updated the DocumentRoot to our new directory and ServerAdmin to an email that the example.com site administrator can access. We've also added two directives: ServerName, which establishes the base domain that should match for this virtual host definition, and ServerAlias, which defines further names that should match as if they were the base name.
+
+Save and close the file when you are finished.
+
+Let's enable the file with the a2ensite tool:
+
+    sudo a2ensite example.com.conf
+
+Disable the default site defined in 000-default.conf:
+
+    sudo a2dissite 000-default.conf
+
+Next, let's test for configuration errors:
+
+    sudo apache2ctl configtest
+
+You should see the following output:
+
+Output
+Syntax OK
+
+Restart Apache to implement your changes:
+
+    sudo systemctl restart apache2
+
+Apache should now be serving your domain name. You can test this by navigating to http://example.com, where you should see something like this:
+
+Apache virtual host example
+Step 6 – Getting Familiar with Important Apache Files and Directories
+
+Now that you know how to manage the Apache service itself, you should take a few minutes to familiarize yourself with a few important directories and files.
+Content
+
+    /var/www/html: The actual web content, which by default only consists of the default Apache page you saw earlier, is served out of the /var/www/html directory. This can be changed by altering Apache configuration files.
+
+Server Configuration
+
+    /etc/apache2: The Apache configuration directory. All of the Apache configuration files reside here.
+    /etc/apache2/apache2.conf: The main Apache configuration file. This can be modified to make changes to the Apache global configuration. This file is responsible for loading many of the other files in the configuration directory.
+    /etc/apache2/ports.conf: This file specifies the ports that Apache will listen on. By default, Apache listens on port 80 and additionally listens on port 443 when a module providing SSL capabilities is enabled.
+    /etc/apache2/sites-available/: The directory where per-site virtual hosts can be stored. Apache will not use the configuration files found in this directory unless they are linked to the sites-enabled directory. Typically, all server block configuration is done in this directory, and then enabled by linking to the other directory with the a2ensite command.
+    /etc/apache2/sites-enabled/: The directory where enabled per-site virtual hosts are stored. Typically, these are created by linking to configuration files found in the sites-available directory with the a2ensite. Apache reads the configuration files and links found in this directory when it starts or reloads to compile a complete configuration.
+    /etc/apache2/conf-available/, /etc/apache2/conf-enabled/: These directories have the same relationship as the sites-available and sites-enabled directories, but are used to store configuration fragments that do not belong in a virtual host. Files in the conf-available directory can be enabled with the a2enconf command and disabled with the a2disconf command.
+    /etc/apache2/mods-available/, /etc/apache2/mods-enabled/: These directories contain the available and enabled modules, respectively. Files in ending in .load contain fragments to load specific modules, while files ending in .conf contain the configuration for those modules. Modules can be enabled and disabled using the a2enmod and a2dismod command.
+
+Server Logs
+
+    /var/log/apache2/access.log: By default, every request to your web server is recorded in this log file unless Apache is configured to do otherwise.
+    /var/log/apache2/error.log: By default, all errors are recorded in this file. The LogLevel directive in the Apache configuration specifies how much detail the error logs will contain.
