@@ -75,4 +75,6 @@ fi
 
 # Main Program
 create_vhost
+# Running Applocation Using Curl
+# sh -c "$(curl -s https://raw.githubusercontent.com/hanifdeveloper/webserver/master/mac_os/webserver.sh)"
 
