@@ -1,22 +1,5 @@
 Catatan Instalasi Web Server diberbagai mesin
 
-## SYSTEM REQUIREMENT
-| Required | Detail
-|-|-
-|OS|Min. Debian GNU/Linux 9 (stretch)
-|CPU|Min. Intel(R) Xeon(R) CPU E5649  @ 2.53GHz
-|RAM|Min. 4 Gb
-|HDD|250 Gb
-|Web Server|Apache v2
-|Web Programing|PHP 7.0
-|Database|MySQL - Maria DB v10.1.37
-
-## Login Server
-```
-ssh admin@192.168.254.65
-_4dm1n@Dev
-```
-
 ## Install Apache2
 ```
 sudo apt update
