@@ -10,6 +10,8 @@
 # Copy paste file konfigurasi default vhosts apache ke folder vhosts (Hal ini dimaksudkan untuk mengaktifkan localhost)
 # sudo cp /etc/apache2/extra/httpd-vhosts.conf /etc/apache2/vhosts/000-default.conf
 
+# Menambahkan Port (Listen 808x) di file httpd.conf
+
 _DNS_NAME="/etc/hosts"
 _CONF_VHOST='/etc/apache2/vhosts'
 _BASE_VHOST='/var/www'
