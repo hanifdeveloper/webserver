@@ -74,7 +74,14 @@ sudo killall -HUP mDNSResponder
 # Main Program
 clear
 create_vhost
+
+echo "Run Application using dns : http://$vhost.local"
+echo "Run Application using localhost : http://localhost:$port"
+
 # Running Application Using Curl
 # sh -c "$(curl -s https://raw.githubusercontent.com/hanifdeveloper/webserver/master/mac_os/virtualhost.sh)"
+# Adding command in bash profile
+# pico ~/.bashrc or pico ~/.zshrc
+# alias create_vhost='sh -c "$(curl -s https://raw.githubusercontent.com/hanifdeveloper/webserver/master/mac_os/virtualhost.sh)"'
 
 

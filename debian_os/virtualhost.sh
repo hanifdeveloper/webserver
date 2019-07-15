@@ -53,7 +53,7 @@ EOF
 # Check Konfigurasi
 sudo apache2ctl configtest
 # Disable default vhost dan Enable New vhost
-sudo a2dissite 000-default.conf
+# sudo a2dissite 000-default.conf
 sudo a2ensite $vhost.local.conf
 # Enable Modul Htaccess
 sudo a2enmod rewrite
@@ -66,5 +66,12 @@ sudo grep -q "127.0.0.1  $vhost.local" $_DNS_NAME && echo 'DNS READY' || echo "1
 # Main Program
 clear
 create_vhost
+
+echo "Run Application using dns : http://$vhost.local"
+echo "Run Application using localhost : http://localhost:$port"
+
 # Running Application Using Curl
 # sh -c "$(curl -s https://raw.githubusercontent.com/hanifdeveloper/webserver/master/debian_os/virtualhost.sh)"
+# Adding command in bash profile
+# pico ~/.bashrc or pico ~/.zshrc
+# alias create_vhost='sh -c "$(curl -s https://raw.githubusercontent.com/hanifdeveloper/webserver/master/debian_os/virtualhost.sh)"'
