@@ -67,4 +67,4 @@ sudo grep -q "127.0.0.1  $vhost.local" $_DNS_NAME && echo 'DNS READY' || echo "1
 clear
 create_vhost
 # Running Application Using Curl
-# sh -c "$(curl -s https://raw.githubusercontent.com/hanifdeveloper/webserver/master/debian_os/webserver.sh)"
+# sh -c "$(curl -s https://raw.githubusercontent.com/hanifdeveloper/webserver/master/debian_os/virtualhost.sh)"

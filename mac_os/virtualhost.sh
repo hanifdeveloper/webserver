@@ -75,5 +75,6 @@ sudo killall -HUP mDNSResponder
 clear
 create_vhost
 # Running Application Using Curl
-# sh -c "$(curl -s https://raw.githubusercontent.com/hanifdeveloper/webserver/master/mac_os/webserver.sh)"
+# sh -c "$(curl -s https://raw.githubusercontent.com/hanifdeveloper/webserver/master/mac_os/virtualhost.sh)"
+
 
