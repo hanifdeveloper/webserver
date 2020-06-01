@@ -2,8 +2,8 @@
 
 # Buka file konfigurasi apache (httpd) => /etc/apache2/httpd.conf
 # Uncoment konfigurasi default virtual host
-# #Include etc/apache2/extra/httpd-vhosts.conf
-# Tambahkan baris dibawahnya konfigurasi virtual host yang baru
+# LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so
+# Tambahkan baris dibawahnya konfigurasi virtual host yang baru (#Include etc/apache2/extra/httpd-vhosts.conf)
 # Include etc/apache2/vhosts/*.conf
 # Buat folder vhosts di /etc/apache2 (kalau di linux, sudah tersedia folder sites-available)
 # sudo mkdir -p /etc/apache2/vhosts
